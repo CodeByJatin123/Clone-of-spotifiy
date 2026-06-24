@@ -20,6 +20,7 @@ body{
     flex: 1;
     border-radius: 1rem;
     overflow:auto;
+    padding: 0 1.5rem 0 1.5rem;
 }
 .music-player{
     background-color: black;
@@ -147,6 +148,7 @@ a{
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0 1rem 0;
+    z-index: 10;
 }
 .sticky-nav-icons{
 margin-left:0.75rem;
@@ -157,3 +159,135 @@ margin-left:0.75rem;
 .nav-item{
     margin-right:1rem;
 }
+@media(width:100){
+    .hide{
+        display:none;
+    }
+}
+.card{
+    background-color: #232323;
+    width:150px;
+    border-radius: 0.5rem;
+    padding:1rem;
+    margin:1.5rem;
+}
+.cards-container{
+    display: flex;
+}
+.card-img{
+    border-radius: 0.5rem;
+    width:100%;
+}
+.card-tittle{
+    font-weight: 600;
+}
+.card-info{
+    font-size: 0.93rem ;
+    opacity: 0.5;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN START   */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .sidebar{
+        width:280px;
+    }
+
+    .cards-container{
+        flex-wrap: wrap;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    body{
+        overflow: auto;
+    }
+
+    .main{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .library{
+        height: auto;
+    }
+
+    .main-content{
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .cards-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card{
+        width: 40%;
+        margin: 0.75rem;
+    }
+
+    .sticky-nav{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .sticky-nav-options{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .music-player{
+        height: 60px;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+    .sidebar{
+        display: none;
+    }
+
+    .main-content{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .card{
+        width: 80%;
+        margin: 0.75rem auto;
+    }
+
+    .sticky-nav{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    h2{
+        font-size: 1.1rem;
+    }
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN END     */
+/* ========================= */
